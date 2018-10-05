@@ -23,18 +23,18 @@ public class MainActivity extends AppCompatActivity {
 
        if(n.equals("")){
             new AlertDialog.Builder(this)
-                    .setTitle("Problem")
-                    .setMessage("Please enter your NTD amount")
-                    .setPositiveButton("OK", null)
+                    .setTitle(R.string.problem)
+                    .setMessage(R.string.please_enter_ntd)
+                    .setPositiveButton(R.string.ok, null)
                     .show();
         }
         else {
-            float NTD = Float.parseFloat(n);
-            double USD = NTD/30.9;
+            float nt = Float.parseFloat(n);
+            float us = nt/30.9f;
             new AlertDialog.Builder(this)
-                    .setTitle("Result")
-                    .setMessage("USD:"+ USD)
-                    .setPositiveButton("OK", null)
+                    .setTitle(R.string.result)
+                    .setMessage(getString(R.string.usd)+ us)
+                    .setPositiveButton(R.string.ok, null)
                     .show();
         }
 
